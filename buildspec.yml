@@ -8,13 +8,7 @@ phases:
     commands:
       - echo "Building Java project..."
       - mvn clean package -DskipTests
-      - mkdir -p output
-      - cp target/*.war output/
-      - cd output
-      - zip ../app.zip *.war
-      - cd ..
 
 artifacts:
   files:
-    - app.zip
-  discard-paths: yes
+    - java-app.war
